@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dot Painter</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Dot Painter</h1>
+      <p>Draw lines, scatter to dots, export to JSON.</p>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="paintCanvas" width="800" height="600"></canvas>
+    </main>
+
+    <footer class="controls">
+      <div class="control-group">
+        <label for="spreadRange">Spread (<span id="spreadVal">12</span>px)</label>
+        <input type="range" id="spreadRange" min="2" max="50" value="12">
+      </div>
+      <div class="control-group">
+        <label for="densityRange">Density (<span id="densityVal">2</span> dots/pt)</label>
+        <input type="range" id="densityRange" min="1" max="10" value="2">
+      </div>
+      <div class="btn-group">
+        <button id="clearBtn" class="btn btn-secondary">Clear</button>
+        <button id="scatterBtn" class="btn btn-primary">Scatter</button>
+        <button id="exportBtn" class="btn btn-accent" disabled>Export</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
